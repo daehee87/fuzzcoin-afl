@@ -1,0 +1,865 @@
+$	afl-cmin	/^shift $((OPTIND-1))$/
+.NOTPARALLEL	Makefile	/^.NOTPARALLEL: clean$/
+ABORT	debug.h	/^#define ABORT(x...) do { \\$/
+ACTF	debug.h	/^#define ACTF(x...) do { \\$/
+AFL_CMIN_ALLOW_ANY	afl-cmin	277
+AFL_CMIN_CRASHES_ONLY	afl-cmin	79
+AFL_MAIN	afl-analyze.c	22
+AFL_MAIN	afl-as.c	31
+AFL_MAIN	afl-fuzz.c	26
+AFL_MAIN	afl-gcc.c	34
+AFL_MAIN	afl-gotcpu.c	28
+AFL_MAIN	afl-showmap.c	24
+AFL_MAIN	afl-tmin.c	22
+AFL_R	types.h	/^#  define AFL_R(x) (random() % (x))$/
+ALLOC_BLK_INC	alloc-inl.h	75
+ALLOC_BUCKETS	alloc-inl.h	356
+ALLOC_C1	alloc-inl.h	/^#define ALLOC_C1(_ptr)  (((u32*)(_ptr))[-2])$/
+ALLOC_C2	alloc-inl.h	/^#define ALLOC_C2(_ptr)  (((u8*)(_ptr))[ALLOC_S(_pt/
+ALLOC_CHECK_RESULT	alloc-inl.h	/^#define ALLOC_CHECK_RESULT(_r, _s) do { \\$/
+ALLOC_CHECK_SIZE	alloc-inl.h	/^#define ALLOC_CHECK_SIZE(_s) do { \\$/
+ALLOC_MAGIC_C1	alloc-inl.h	60
+ALLOC_MAGIC_C2	alloc-inl.h	62
+ALLOC_MAGIC_F	alloc-inl.h	61
+ALLOC_OFF_HEAD	alloc-inl.h	70
+ALLOC_OFF_TOTAL	alloc-inl.h	71
+ALLOC_S	alloc-inl.h	/^#define ALLOC_S(_ptr)   (((u32*)(_ptr))[-1])$/
+ARITH_MAX	config.h	131
+AS_LOOP_ENV_VAR	config.h	272
+AVG_SMOOTHING	config.h	201
+BADF	debug.h	/^#define BADF(x...) do { \\$/
+BANNER	afl-plot	65
+BIN_PATH	Makefile	/^BIN_PATH    = $(PREFIX)\/bin$/
+CALL_L64	afl-as.h	/^#  define CALL_L64(str)		"call _" str "\\n"$/
+CALL_L64	afl-as.h	/^#  define CALL_L64(str)		"call " str "@PLT\\n"$/
+CAL_CHANCES	config.h	308
+CAL_CYCLES	config.h	65
+CAL_CYCLES_LONG	config.h	66
+CAL_TMOUT_ADD	config.h	304
+CAL_TMOUT_PERC	config.h	303
+CASE_PREFIX	afl-fuzz.c	3000
+CASE_PREFIX	afl-fuzz.c	3002
+CC	README	98
+CC	README	114
+CFLAGS     +	Makefile	/^CFLAGS     += -Wall -D_FORTIFY_SOURCE=2 -g -Wno-po/
+CFLAGS     ?	Makefile	/^CFLAGS     ?= -O3 -funroll-loops$/
+CHAR64LONG16	sha1.c	65
+CHECK_PTR	alloc-inl.h	/^#define CHECK_PTR(_p) do { \\$/
+CHECK_PTR_EXPR	alloc-inl.h	/^#define CHECK_PTR_EXPR(_p) ({ \\$/
+CHK_FORMAT	afl-fuzz.c	/^#define CHK_FORMAT(_divisor, _limit_mult, _fmt, _c/
+CHK_FORMAT	afl-fuzz.c	698
+CLANG_ENV_VAR	config.h	271
+COMM_HDR	Makefile	/^COMM_HDR    = alloc-inl.h config.h debug.h types.h/
+CP_TOOL	afl-cmin	265
+CTEST_BUSY_CYCLES	config.h	331
+CTEST_CORE_TRG_MS	config.h	330
+CTEST_TARGET_MS	config.h	329
+CUR	afl-cmin	316
+CUR	afl-cmin	327
+CUR	afl-cmin	377
+CUR	afl-cmin	428
+CURSOR_HIDE	debug.h	154
+CURSOR_SHOW	debug.h	155
+CUR_TIME	afl-whatsup	55
+DEAD_CNT	afl-whatsup	102
+DEFER_ENV_VAR	config.h	274
+DEFER_SIG	config.h	279
+DF	afl-fuzz.c	/^static u8* DF(double val) {$/
+DFL_ck_alloc	alloc-inl.h	/^static inline void* DFL_ck_alloc(u32 size) {$/
+DFL_ck_alloc_nozero	alloc-inl.h	/^static inline void* DFL_ck_alloc_nozero(u32 size) /
+DFL_ck_free	alloc-inl.h	/^static inline void DFL_ck_free(void* mem) {$/
+DFL_ck_memdup	alloc-inl.h	/^static inline void* DFL_ck_memdup(void* mem, u32 s/
+DFL_ck_memdup_str	alloc-inl.h	/^static inline u8* DFL_ck_memdup_str(u8* mem, u32 s/
+DFL_ck_realloc	alloc-inl.h	/^static inline void* DFL_ck_realloc(void* orig, u32/
+DFL_ck_realloc_block	alloc-inl.h	/^static inline void* DFL_ck_realloc_block(void* ori/
+DFL_ck_strdup	alloc-inl.h	/^static inline u8* DFL_ck_strdup(u8* str) {$/
+DI	afl-fuzz.c	/^static u8* DI(u64 val) {$/
+DMS	afl-fuzz.c	/^static u8* DMS(u64 val) {$/
+DOC_PATH	Makefile	/^DOC_PATH    = $(PREFIX)\/share\/doc\/afl$/
+DTD	afl-fuzz.c	/^static u8* DTD(u64 cur_ms, u64 event_ms) {$/
+EFF_ALEN	afl-fuzz.c	/^#define EFF_ALEN(_l)          (EFF_APOS(_l) + !!EF/
+EFF_APOS	afl-fuzz.c	/^#define EFF_APOS(_p)          ((_p) >> EFF_MAP_SCA/
+EFF_MAP_SCALE2	config.h	179
+EFF_MAX_PERC	config.h	188
+EFF_MIN_LEN	config.h	183
+EFF_REM	afl-fuzz.c	/^#define EFF_REM(_x)           ((_x) & ((1 << EFF_M/
+EFF_SPAN_ALEN	afl-fuzz.c	/^#define EFF_SPAN_ALEN(_p, _l) (EFF_APOS((_p) + (_l/
+EXEC_FAIL_SIG	config.h	283
+EXEC_TIMEOUT	config.h	44
+EXEC_TM_ROUND	config.h	48
+EXP_ST	afl-fuzz.c	78
+EXP_ST	afl-fuzz.c	80
+EXTRA_PAR	afl-cmin	76
+EXTRA_PAR	afl-cmin	82
+FANCY_BOXES	config.h	39
+FATAL	debug.h	/^#define FATAL(x...) do { \\$/
+FAULT_CRASH	afl-fuzz.c	327
+FAULT_ERROR	afl-fuzz.c	328
+FAULT_NOBITS	afl-fuzz.c	330
+FAULT_NOINST	afl-fuzz.c	329
+FAULT_NONE	afl-fuzz.c	325
+FAULT_TMOUT	afl-fuzz.c	326
+FF	afl-fuzz.c	/^#define FF(_b)  (0xff << ((_b) << 3))$/
+FIRST_FILE	afl-cmin	252
+FLIP_BIT	afl-fuzz.c	/^#define FLIP_BIT(_ar, _b) do { \\$/
+FLIP_BIT	afl-fuzz.c	6666
+FORKSRV_FD	config.h	292
+FORK_WAIT_MULT	config.h	297
+FUZZCOIN	afl-fuzz.c	24
+H	afl-analyze	9
+H	afl-showmap	6
+HASH_CONST	config.h	325
+HAVE_AFFINITY	afl-fuzz.c	71
+HAVE_AFFINITY	afl-gotcpu.c	46
+HAVOC_BLK_LARGE	config.h	108
+HAVOC_BLK_MEDIUM	config.h	107
+HAVOC_BLK_SMALL	config.h	106
+HAVOC_BLK_XL	config.h	112
+HAVOC_CYCLES	config.h	79
+HAVOC_CYCLES_INIT	config.h	80
+HAVOC_MAX_MULT	config.h	85
+HAVOC_MIN	config.h	89
+HAVOC_STACK_POW2	config.h	100
+HELPER_PATH	Makefile	/^HELPER_PATH = $(PREFIX)\/lib\/afl$/
+INTERESTING_16	config.h	228
+INTERESTING_32	config.h	240
+INTERESTING_8	config.h	217
+IN_COUNT	afl-cmin	244
+IN_DIR	afl-cmin	59
+IN_DIR	afl-cmin	213
+KEEP_UNIQUE_CRASH	config.h	75
+KEEP_UNIQUE_HANG	config.h	74
+LDFLAGS  +	Makefile	/^  LDFLAGS  += -ldl$/
+MAP_SIZE	config.h	317
+MAP_SIZE_POW2	config.h	316
+MAX	types.h	/^#  define MAX(_a,_b) ((_a) > (_b) ? (_a) : (_b))$/
+MAX_ALLOC	config.h	321
+MAX_AUTO_EXTRA	config.h	160
+MAX_AUTO_EXTRAS	config.h	173
+MAX_DET_EXTRAS	config.h	166
+MAX_DICT_FILE	config.h	155
+MAX_FILE	config.h	142
+MAX_LINE	config.h	263
+MEM_BARRIER	types.h	/^#define MEM_BARRIER() \\$/
+MEM_LIMIT	afl-cmin	48
+MEM_LIMIT	afl-cmin	69
+MEM_LIMIT	config.h	53
+MEM_LIMIT	config.h	55
+MEM_LIMIT_QEMU	config.h	60
+MESSAGES_TO_STDOUT	afl-fuzz.c	27
+MIN	types.h	/^#  define MIN(_a,_b) ((_a) > (_b) ? (_b) : (_a))$/
+MIN_AUTO_EXTRA	config.h	159
+MISC_PATH	Makefile	/^MISC_PATH   = $(PREFIX)\/share\/afl$/
+MSAN_ERROR	config.h	287
+Mafl-analyze	afl-analyze.c	/^int main(int argc, char** argv) {$/
+Mafl-as	afl-as.c	/^int main(int argc, char** argv) {$/
+Mafl-fuzz	afl-fuzz.c	/^int main(int argc, char** argv) {$/
+Mafl-gcc	afl-gcc.c	/^int main(int argc, char** argv) {$/
+Mafl-gotcpu	afl-gotcpu.c	/^int main(int argc, char** argv) {$/
+Mafl-showmap	afl-showmap.c	/^int main(int argc, char** argv) {$/
+Mafl-tmin	afl-tmin.c	/^int main(int argc, char** argv) {$/
+Mtest-instr	test-instr.c	/^int main(int argc, char** argv) {$/
+O	README	394
+OKF	debug.h	/^#define OKF(x...) do { \\$/
+OUTPUT_GRACE	config.h	209
+OUT_COUNT	afl-cmin	450
+OUT_DIR	afl-cmin	63
+Oh	README	328
+OpenBSD	README	243
+Or	README	496
+PERSIST_ENV_VAR	config.h	273
+PERSIST_SIG	config.h	278
+PFATAL	debug.h	/^#define PFATAL(x...) do { \\$/
+PLOT_UPDATE_SEC	config.h	197
+PREFIX     ?	Makefile	/^PREFIX     ?= \/usr\/local$/
+PROGNAME	Makefile	/^PROGNAME    = afl$/
+PROGS	Makefile	/^PROGS       = afl-gcc afl-fuzz afl-showmap afl-tmi/
+R	types.h	/^#  define R(x) (random() % (x))$/
+R0	sha1.c	/^#define R0(v,w,x,y,z,i) z+=((w&(x^y))^y)+blk0(i)+0/
+R1	sha1.c	/^#define R1(v,w,x,y,z,i) z+=((w&(x^y))^y)+blk(i)+0x/
+R2	sha1.c	/^#define R2(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0x6ED9EB/
+R3	sha1.c	/^#define R3(v,w,x,y,z,i) z+=(((w|x)&y)|(w&x))+blk(i/
+R4	sha1.c	/^#define R4(v,w,x,y,z,i) z+=(w^x^y)+blk(i)+0xCA62C1/
+RESEED_RNG	config.h	258
+RESET_G1	debug.h	112
+RESET_G1	debug.h	130
+RESP_CKSUM	afl-analyze.c	87
+RESP_FIXED	afl-analyze.c	84
+RESP_LEN	afl-analyze.c	86
+RESP_MINOR	afl-analyze.c	82
+RESP_NONE	afl-analyze.c	81
+RESP_SUSPECT	afl-analyze.c	88
+RESP_VARIABLE	afl-analyze.c	83
+ROL32	hash.h	/^#define ROL32(_x, _r)  ((((u32)(_x)) << (_r)) | ((/
+ROL64	hash.h	/^#define ROL64(_x, _r)  ((((u64)(_x)) << (_r)) | ((/
+RPFATAL	debug.h	/^#define RPFATAL(res, x...) do { \\$/
+RUN_UNIX	afl-whatsup	82
+Rl	afl-as	5
+Rl	as	5
+SAYF	debug.h	/^#  define SAYF(x...)    printf(x)$/
+SAYF	debug.h	/^#  define SAYF(x...)    fprintf(stderr, x)$/
+SET_G1	debug.h	111
+SET_G1	debug.h	129
+SHA1	sha1.c	/^void SHA1($/
+SHA1Final	sha1.c	/^void SHA1Final($/
+SHA1HANDSOFF	sha1.c	18
+SHA1Init	sha1.c	/^void SHA1Init($/
+SHA1Transform	sha1.c	/^void SHA1Transform($/
+SHA1Update	sha1.c	/^void SHA1Update($/
+SHA1_CTX	sha1.h	17
+SHA1_H	sha1.h	2
+SHM_ENV_VAR	config.h	267
+SHOWMAP	afl-cmin	233
+SH_PROGS	Makefile	/^SH_PROGS    = afl-plot afl-cmin afl-whatsup$/
+SKIP_NFAV_NEW_PROB	config.h	119
+SKIP_NFAV_OLD_PROB	config.h	118
+SKIP_TO_NEW_PROB	config.h	117
+SP10	afl-fuzz.c	4057
+SP20	afl-fuzz.c	4058
+SP5	afl-fuzz.c	4056
+SPLICE_CYCLES	config.h	123
+SPLICE_HAVOC	config.h	127
+STAGE_ARITH16	afl-fuzz.c	302
+STAGE_ARITH32	afl-fuzz.c	303
+STAGE_ARITH8	afl-fuzz.c	301
+STAGE_EXTRAS_AO	afl-fuzz.c	309
+STAGE_EXTRAS_UI	afl-fuzz.c	308
+STAGE_EXTRAS_UO	afl-fuzz.c	307
+STAGE_FLIP1	afl-fuzz.c	295
+STAGE_FLIP16	afl-fuzz.c	299
+STAGE_FLIP2	afl-fuzz.c	296
+STAGE_FLIP32	afl-fuzz.c	300
+STAGE_FLIP4	afl-fuzz.c	297
+STAGE_FLIP8	afl-fuzz.c	298
+STAGE_HAVOC	afl-fuzz.c	310
+STAGE_INTEREST16	afl-fuzz.c	305
+STAGE_INTEREST32	afl-fuzz.c	306
+STAGE_INTEREST8	afl-fuzz.c	304
+STAGE_SPLICE	afl-fuzz.c	311
+STAGE_VAL_BE	afl-fuzz.c	319
+STAGE_VAL_LE	afl-fuzz.c	318
+STAGE_VAL_NONE	afl-fuzz.c	317
+STATS_UPDATE_SEC	config.h	196
+STDIN_FILE	afl-cmin	66
+STDIN_FILE	afl-cmin	161
+STRINGIFY	types.h	/^#define STRINGIFY(x) STRINGIFY_INTERNAL(x)$/
+STRINGIFY_INTERNAL	types.h	/^#define STRINGIFY_INTERNAL(x) #x$/
+SUMMARY_ONLY	afl-whatsup	25
+SWAP16	types.h	/^#define SWAP16(_x) ({ \\$/
+SWAP32	types.h	/^#define SWAP32(_x) ({ \\$/
+SYNC_INTERVAL	config.h	205
+T1	afl-cmin	132
+T1	afl-plot	44
+TARGET_BIN	afl-cmin	195
+TERM_CLEAR	debug.h	152
+TERM_HOME	debug.h	151
+TEST_CC	Makefile	/^  TEST_CC   = afl-gcc$/
+TEST_CC	Makefile	/^  TEST_CC   = afl-clang$/
+TIMEOUT	afl-cmin	73
+TMIN_MAX_FILE	config.h	146
+TMIN_SET_MIN_SIZE	config.h	150
+TMIN_SET_STEPS	config.h	151
+TMOUT_LIMIT	config.h	70
+TNEW	afl-cmin	188
+TOTAL_DAYS	afl-whatsup	137
+TRACE_DIR	afl-cmin	156
+TRIM_END_STEPS	config.h	138
+TRIM_MIN_BYTES	config.h	136
+TRIM_START_STEPS	config.h	137
+TRK	alloc-inl.h	366
+TRKH	alloc-inl.h	/^#define TRKH(_ptr) (((((u32)(_ptr)) >> 16) ^ ((u32/
+TRK_alloc_buf	alloc-inl.h	/^static inline void TRK_alloc_buf(void* ptr, const /
+TRK_ck_alloc	alloc-inl.h	/^static inline void* TRK_ck_alloc(u32 size, const c/
+TRK_ck_free	alloc-inl.h	/^static inline void TRK_ck_free(void* ptr, const ch/
+TRK_ck_memdup	alloc-inl.h	/^static inline void* TRK_ck_memdup(void* mem, u32 s/
+TRK_ck_memdup_str	alloc-inl.h	/^static inline void* TRK_ck_memdup_str(void* mem, u/
+TRK_ck_realloc	alloc-inl.h	/^static inline void* TRK_ck_realloc(void* orig, u32/
+TRK_ck_realloc_block	alloc-inl.h	/^static inline void* TRK_ck_realloc_block(void* ori/
+TRK_ck_strdup	alloc-inl.h	/^static inline void* TRK_ck_strdup(u8* str, const c/
+TRK_cnt	alloc-inl.h	367
+TRK_free_buf	alloc-inl.h	/^static inline void TRK_free_buf(void* ptr, const c/
+TRK_obj	alloc-inl.h	358
+TRK_report	alloc-inl.h	/^static inline void TRK_report(void) {$/
+UI_TARGET_HZ	config.h	192
+UR	afl-fuzz.c	/^static inline u32 UR(u32 limit) {$/
+USE_AUTO_EXTRAS	config.h	172
+USE_COLOR	config.h	35
+VERSION	config.h	24
+VERSION	Makefile	/^VERSION     = $(shell grep '^\\#define VERSION ' co/
+WARNF	debug.h	/^#define WARNF(x...) do { \\$/
+_FILE_OFFSET_BITS	afl-fuzz.c	30
+_GNU_SOURCE	afl-fuzz.c	29
+_GNU_SOURCE	afl-gotcpu.c	29
+_HAVE_AFL_AS_H	afl-as.h	35
+_HAVE_ALLOC_INL_H	alloc-inl.h	22
+_HAVE_CONFIG_H	config.h	18
+_HAVE_DEBUG_H	debug.h	18
+_HAVE_HASH_H	hash.h	28
+_HAVE_TYPES_H	types.h	18
+a_extras	afl-fuzz.c	281
+a_extras_cnt	afl-fuzz.c	282
+add_instrumentation	afl-as.c	/^static void add_instrumentation(void) {$/
+add_to_queue	afl-fuzz.c	/^static void add_to_queue(u8* fname, u32 len, u8 pa/
+addition	README	35
+address	README	324
+afl-analyze	Makefile	/^afl-analyze: afl-analyze.c $(COMM_HDR) | test_x86$/
+afl-as	Makefile	/^afl-as: afl-as.c afl-as.h $(COMM_HDR) | test_x86$/
+afl-fuzz	Makefile	/^afl-fuzz: afl-fuzz.c $(COMM_HDR) | test_x86$/
+afl-gcc	Makefile	/^afl-gcc: afl-gcc.c $(COMM_HDR) | test_x86$/
+afl-gotcpu	Makefile	/^afl-gotcpu: afl-gotcpu.c $(COMM_HDR) | test_x86$/
+afl-showmap	Makefile	/^afl-showmap: afl-showmap.c $(COMM_HDR) | test_x86$/
+afl-tmin	Makefile	/^afl-tmin: afl-tmin.c $(COMM_HDR) | test_x86$/
+again	README	263
+all	Makefile	/^all: test_x86 $(PROGS) afl-as test_build all_done$/
+all_done	Makefile	/^all_done: test_build$/
+alloc_printf	alloc-inl.h	/^#define alloc_printf(_str...) ({ \\$/
+alloc_report	alloc-inl.h	/^#define alloc_report()$/
+alloc_report	alloc-inl.h	/^#  define alloc_report() TRK_report()$/
+alloc_report	alloc-inl.h	/^#  define alloc_report()$/
+analyze	afl-analyze.c	/^static void analyze(char** argv) {$/
+anything_set	afl-analyze.c	/^static inline u8 anything_set(void) {$/
+anything_set	afl-tmin.c	/^static inline u8 anything_set(void) {$/
+apply_mask	afl-tmin.c	/^static void apply_mask(u32* mem, u32* mask) {$/
+as_params	afl-as.c	51
+as_path	afl-gcc.c	46
+at_file	afl-showmap.c	56
+auto_changed	afl-fuzz.c	124
+bH	debug.h	115
+bH	debug.h	133
+bH10	afl-fuzz.c	4053
+bH2	afl-fuzz.c	4051
+bH20	afl-fuzz.c	4054
+bH30	afl-fuzz.c	4055
+bH5	afl-fuzz.c	4052
+bHB	debug.h	125
+bHB	debug.h	143
+bHT	debug.h	124
+bHT	debug.h	142
+bLB	debug.h	119
+bLB	debug.h	137
+bLT	debug.h	117
+bLT	debug.h	135
+bRB	debug.h	120
+bRB	debug.h	138
+bRT	debug.h	118
+bRT	debug.h	136
+bSTART	debug.h	113
+bSTART	debug.h	131
+bSTG	afl-fuzz.c	4050
+bSTOP	debug.h	114
+bSTOP	debug.h	132
+bV	debug.h	116
+bV	debug.h	134
+bVL	debug.h	123
+bVL	debug.h	141
+bVR	debug.h	122
+bVR	debug.h	140
+bX	debug.h	121
+bX	debug.h	139
+be_quiet	afl-as.c	56
+be_quiet	afl-gcc.c	49
+bezier	afl-plot	133
+bgBLK	debug.h	49
+bgBLK	debug.h	86
+bgBLU	debug.h	53
+bgBLU	debug.h	90
+bgBRI	debug.h	64
+bgBRI	debug.h	101
+bgBRN	debug.h	52
+bgBRN	debug.h	89
+bgCYA	debug.h	55
+bgCYA	debug.h	92
+bgGRA	debug.h	57
+bgGRA	debug.h	94
+bgGRN	debug.h	51
+bgGRN	debug.h	88
+bgLBL	debug.h	61
+bgLBL	debug.h	98
+bgLCY	debug.h	63
+bgLCY	debug.h	100
+bgLGN	debug.h	59
+bgLGN	debug.h	96
+bgLGR	debug.h	56
+bgLGR	debug.h	93
+bgLRD	debug.h	58
+bgLRD	debug.h	95
+bgMGN	debug.h	54
+bgMGN	debug.h	91
+bgPIN	debug.h	62
+bgPIN	debug.h	99
+bgRED	debug.h	50
+bgRED	debug.h	87
+bgYEL	debug.h	60
+bgYEL	debug.h	97
+binary_mode	afl-showmap.c	67
+bind_to_free_cpu	afl-fuzz.c	/^static void bind_to_free_cpu(void) {$/
+bitmap_changed	afl-fuzz.c	128
+bitmap_size	afl-fuzz.c	249
+blind	README	26
+blk	sha1.c	/^#define blk(i) (block->l[i&15] = rol(block->l[(i+1/
+blk0	sha1.c	/^#define blk0(i) (block->l[i] = (rol(block->l[i],24/
+blk0	sha1.c	/^#define blk0(i) block->l[i]$/
+blocks_eff_select	afl-fuzz.c	194
+blocks_eff_total	afl-fuzz.c	193
+buffer	sha1.h	16
+build	README	112
+bytes_trim_in	afl-fuzz.c	191
+bytes_trim_out	afl-fuzz.c	192
+c	sha1.c	63
+cBLK	debug.h	31
+cBLK	debug.h	68
+cBLU	debug.h	35
+cBLU	debug.h	72
+cBRI	debug.h	46
+cBRI	debug.h	83
+cBRN	debug.h	34
+cBRN	debug.h	71
+cCYA	debug.h	37
+cCYA	debug.h	74
+cEOL	debug.h	153
+cGRA	debug.h	39
+cGRA	debug.h	76
+cGRN	debug.h	33
+cGRN	debug.h	70
+cLBL	debug.h	43
+cLBL	debug.h	80
+cLCY	debug.h	45
+cLCY	debug.h	82
+cLGN	debug.h	41
+cLGN	debug.h	78
+cLGR	debug.h	38
+cLGR	debug.h	75
+cLRD	debug.h	40
+cLRD	debug.h	77
+cMGN	debug.h	36
+cMGN	debug.h	73
+cPIN	debug.h	44
+cPIN	debug.h	81
+cRED	debug.h	32
+cRED	debug.h	69
+cRST	debug.h	47
+cRST	debug.h	84
+cYEL	debug.h	42
+cYEL	debug.h	79
+cal_failed	afl-fuzz.c	240
+calculate_score	afl-fuzz.c	/^static u32 calculate_score(struct queue_entry* q) /
+calibrate_case	afl-fuzz.c	/^static u8 calibrate_case(char** argv, struct queue/
+case	README	109
+cc_par_cnt	afl-gcc.c	48
+cc_params	afl-gcc.c	47
+check_asan_opts	afl-fuzz.c	/^static void check_asan_opts(void) {$/
+check_binary	afl-fuzz.c	/^EXP_ST void check_binary(u8* fname) {$/
+check_cpu_governor	afl-fuzz.c	/^static void check_cpu_governor(void) {$/
+check_crash_handling	afl-fuzz.c	/^static void check_crash_handling(void) {$/
+check_if_tty	afl-fuzz.c	/^static void check_if_tty(void) {$/
+check_map_coverage	afl-fuzz.c	/^static void check_map_coverage(void) {$/
+check_term_size	afl-fuzz.c	/^static void check_term_size(void) {$/
+child_crashed	afl-showmap.c	73
+child_pid	afl-analyze.c	48
+child_pid	afl-fuzz.c	143
+child_pid	afl-showmap.c	49
+child_pid	afl-tmin.c	47
+child_timed_out	afl-analyze.c	76
+child_timed_out	afl-showmap.c	72
+child_timed_out	afl-tmin.c	81
+choose_block_len	afl-fuzz.c	/^static u32 choose_block_len(u32 limit) {$/
+ck_alloc	alloc-inl.h	338
+ck_alloc	alloc-inl.h	/^#define ck_alloc(_p1) \\$/
+ck_alloc_nozero	alloc-inl.h	339
+ck_alloc_nozero	alloc-inl.h	/^#define ck_alloc_nozero(_p1) \\$/
+ck_free	alloc-inl.h	345
+ck_free	alloc-inl.h	/^#define ck_free(_p1) \\$/
+ck_memdup	alloc-inl.h	343
+ck_memdup	alloc-inl.h	/^#define ck_memdup(_p1, _p2) \\$/
+ck_memdup_str	alloc-inl.h	344
+ck_memdup_str	alloc-inl.h	/^#define ck_memdup_str(_p1, _p2) \\$/
+ck_read	debug.h	/^#define ck_read(fd, buf, len, fn) do { \\$/
+ck_realloc	alloc-inl.h	340
+ck_realloc	alloc-inl.h	/^#define ck_realloc(_p1, _p2) \\$/
+ck_realloc_block	alloc-inl.h	341
+ck_realloc_block	alloc-inl.h	/^#define ck_realloc_block(_p1, _p2) \\$/
+ck_strdup	alloc-inl.h	342
+ck_strdup	alloc-inl.h	/^#define ck_strdup(_p1) \\$/
+ck_write	debug.h	/^#define ck_write(fd, buf, len, fn) do { \\$/
+clang_mode	afl-as.c	57
+clang_mode	afl-gcc.c	50
+classify_counts	afl-analyze.c	/^static void classify_counts(u8* mem) {$/
+classify_counts	afl-fuzz.c	/^static inline void classify_counts(u64* mem) {$/
+classify_counts	afl-fuzz.c	/^static inline void classify_counts(u32* mem) {$/
+classify_counts	afl-showmap.c	/^static void classify_counts(u8* mem, const u8* map/
+classify_counts	afl-tmin.c	/^static void classify_counts(u8* mem) {$/
+clean	Makefile	/^clean:$/
+clear_screen	afl-fuzz.c	157
+cmin_mode	afl-showmap.c	66
+code	README	27
+common_fuzz_stuff	afl-fuzz.c	/^EXP_ST u8 common_fuzz_stuff(char** argv, u8* out_b/
+compare_extras_len	afl-fuzz.c	/^static int compare_extras_len(const void* p1, cons/
+compare_extras_use_d	afl-fuzz.c	/^static int compare_extras_use_d(const void* p1, co/
+could_be_arith	afl-fuzz.c	/^static u8 could_be_arith(u32 old_val, u32 new_val,/
+could_be_bitflip	afl-fuzz.c	/^static u8 could_be_bitflip(u32 xor_val) {$/
+could_be_interest	afl-fuzz.c	/^static u8 could_be_interest(u32 old_val, u32 new_v/
+count	sha1.h	15
+count_bits	afl-fuzz.c	/^static u32 count_bits(u8* mem) {$/
+count_bytes	afl-fuzz.c	/^static u32 count_bytes(u8* mem) {$/
+count_class_binary	afl-showmap.c	92
+count_class_human	afl-showmap.c	78
+count_class_lookup	afl-analyze.c	93
+count_class_lookup	afl-tmin.c	86
+count_class_lookup16	afl-fuzz.c	1164
+count_class_lookup8	afl-fuzz.c	1150
+count_non_255_bytes	afl-fuzz.c	/^static u32 count_non_255_bytes(u8* mem) {$/
+cpu_aff	afl-fuzz.c	229
+cpu_core_count	afl-fuzz.c	225
+crash_mode	afl-fuzz.c	122
+crash_mode	afl-tmin.c	73
+cull_queue	afl-fuzz.c	/^static void cull_queue(void) {$/
+cur_depth	afl-fuzz.c	170
+cur_skipped_paths	afl-fuzz.c	169
+current_entry	afl-fuzz.c	174
+cycles_wo_finds	afl-fuzz.c	189
+data	afl-fuzz.c	273
+delete_files	afl-fuzz.c	/^static u8 delete_files(u8* path, u8* prefix) {$/
+depth	afl-fuzz.c	254
+describe_op	afl-fuzz.c	/^static u8* describe_op(u8 hnb) {$/
+destroy_extras	afl-fuzz.c	/^static void destroy_extras(void) {$/
+destroy_queue	afl-fuzz.c	/^EXP_ST void destroy_queue(void) {$/
+detect_file_args	afl-analyze.c	/^static void detect_file_args(char** argv) {$/
+detect_file_args	afl-fuzz.c	/^EXP_ST void detect_file_args(char** argv) {$/
+detect_file_args	afl-showmap.c	/^static void detect_file_args(char** argv) {$/
+detect_file_args	afl-tmin.c	/^static void detect_file_args(char** argv) {$/
+dev_null_fd	afl-analyze.c	68
+dev_null_fd	afl-tmin.c	71
+dev_urandom_fd	afl-fuzz.c	137
+doc_path	afl-analyze.c	55
+doc_path	afl-fuzz.c	94
+doc_path	afl-showmap.c	54
+doc_path	afl-tmin.c	56
+dumb_mode	afl-fuzz.c	113
+dump_hex	afl-analyze.c	/^static void dump_hex(u8* buf, u32 len, u8* b_data)/
+edges_only	afl-analyze.c	70
+edges_only	afl-showmap.c	65
+edges_only	afl-tmin.c	75
+edit_params	afl-as.c	/^static void edit_params(int argc, char** argv) {$/
+edit_params	afl-gcc.c	/^static void edit_params(u32 argc, char** argv) {$/
+exact_mode	afl-tmin.c	76
+exec_cksum	afl-fuzz.c	250
+exec_hangs	afl-analyze.c	62
+exec_tmout	afl-analyze.c	63
+exec_tmout	afl-fuzz.c	98
+exec_tmout	afl-showmap.c	58
+exec_tmout	afl-tmin.c	66
+exec_us	afl-fuzz.c	252
+exit	afl-cmin	87
+exit_crash	afl-tmin.c	74
+extra_data	afl-fuzz.c	272
+extras	afl-fuzz.c	278
+extras_cnt	afl-fuzz.c	279
+favored	afl-fuzz.c	246
+file	alloc-inl.h	360
+files	README	33
+find_as	afl-gcc.c	/^static void find_as(u8* argv0) {$/
+find_binary	afl-analyze.c	/^static void find_binary(u8* fname) {$/
+find_binary	afl-showmap.c	/^static void find_binary(u8* fname) {$/
+find_binary	afl-tmin.c	/^static void find_binary(u8* fname) {$/
+find_start_position	afl-fuzz.c	/^static u32 find_start_position(void) {$/
+find_timeout	afl-fuzz.c	/^static void find_timeout(void) {$/
+fix_up_banner	afl-fuzz.c	/^static void fix_up_banner(u8* name) {$/
+fix_up_sync	afl-fuzz.c	/^static void fix_up_sync(void) {$/
+fname	afl-fuzz.c	237
+force_deterministic	afl-fuzz.c	111
+forksrv_pid	afl-fuzz.c	142
+fs_redundant	afl-fuzz.c	247
+func	alloc-inl.h	360
+fuzz	README	92
+fuzz_one	afl-fuzz.c	/^static u8 fuzz_one(char** argv) {$/
+fuzzcoin_seed	afl-fuzz.c	107
+get_core_count	afl-fuzz.c	/^static void get_core_count(void) {$/
+get_cpu_usage_us	afl-gotcpu.c	/^static u64 get_cpu_usage_us(void) {$/
+get_cur_time	afl-fuzz.c	/^static u64 get_cur_time(void) {$/
+get_cur_time_us	afl-fuzz.c	/^static u64 get_cur_time_us(void) {$/
+get_cur_time_us	afl-gotcpu.c	/^static u64 get_cur_time_us(void) {$/
+get_qemu_argv	afl-analyze.c	/^static char** get_qemu_argv(u8* own_loc, char** ar/
+get_qemu_argv	afl-fuzz.c	/^static char** get_qemu_argv(u8* own_loc, char** ar/
+get_qemu_argv	afl-showmap.c	/^static char** get_qemu_argv(u8* own_loc, char** ar/
+get_qemu_argv	afl-tmin.c	/^static char** get_qemu_argv(u8* own_loc, char** ar/
+get_runnable_processes	afl-fuzz.c	/^static double get_runnable_processes(void) {$/
+given	README	293
+handicap	afl-fuzz.c	253
+handle_resize	afl-fuzz.c	/^static void handle_resize(int sig) {$/
+handle_skipreq	afl-fuzz.c	/^static void handle_skipreq(int sig) {$/
+handle_stop_sig	afl-analyze.c	/^static void handle_stop_sig(int sig) {$/
+handle_stop_sig	afl-fuzz.c	/^static void handle_stop_sig(int sig) {$/
+handle_stop_sig	afl-showmap.c	/^static void handle_stop_sig(int sig) {$/
+handle_stop_sig	afl-tmin.c	/^static void handle_stop_sig(int sig) {$/
+handle_timeout	afl-analyze.c	/^static void handle_timeout(int sig) {$/
+handle_timeout	afl-fuzz.c	/^static void handle_timeout(int sig) {$/
+handle_timeout	afl-showmap.c	/^static void handle_timeout(int sig) {$/
+handle_timeout	afl-tmin.c	/^static void handle_timeout(int sig) {$/
+hang_tmout	afl-fuzz.c	99
+has_new_bits	afl-fuzz.c	/^static inline u8 has_new_bits(u8* virgin_map) {$/
+has_new_cov	afl-fuzz.c	244
+hash32	hash.h	/^static inline u32 hash32(const void* key, u32 len,/
+hash32	hash.h	/^static inline u32 hash32(const void* key, u32 len,/
+hash_to_file	afl-fuzz.c	/^void hash_to_file(char* data, unsigned int n, cons/
+havoc_div	afl-fuzz.c	175
+hit_cnt	afl-fuzz.c	275
+in_bitmap	afl-fuzz.c	93
+in_data	afl-analyze.c	57
+in_data	afl-tmin.c	58
+in_dir	afl-fuzz.c	87
+in_file	afl-analyze.c	52
+in_file	afl-tmin.c	52
+in_len	afl-analyze.c	59
+in_len	afl-tmin.c	60
+in_place_resume	afl-fuzz.c	123
+init_count_class16	afl-fuzz.c	/^EXP_ST void init_count_class16(void) {$/
+init_forkserver	afl-fuzz.c	/^EXP_ST void init_forkserver(char** argv) {$/
+input_file	afl-as.c	53
+inst_ratio	afl-as.c	62
+install	Makefile	/^install: all$/
+installed	README	250
+interesting_16	afl-fuzz.c	289
+interesting_32	afl-fuzz.c	290
+interesting_8	afl-fuzz.c	288
+iter_count	afl-fuzz.c	106
+jobs	README	246
+join	README	495
+just_version	afl-as.c	59
+keep_cores	afl-showmap.c	68
+kill_signal	afl-fuzz.c	115
+l	sha1.c	64
+last_crash_execs	afl-fuzz.c	187
+last_crash_time	afl-fuzz.c	185
+last_hang_time	afl-fuzz.c	186
+last_path_time	afl-fuzz.c	184
+len	afl-fuzz.c	238
+len	afl-fuzz.c	274
+libraries	README	107
+library	README	110
+likely	types.h	/^#define likely(_x)   __builtin_expect(!!(_x), 1)$/
+line	alloc-inl.h	361
+link_or_copy	afl-fuzz.c	/^static void link_or_copy(u8* old_path, u8* new_pat/
+load_auto	afl-fuzz.c	/^static void load_auto(void) {$/
+load_extras	afl-fuzz.c	/^static void load_extras(u8* dir) {$/
+load_extras_file	afl-fuzz.c	/^static void load_extras_file(u8* fname, u32* min_l/
+locate_diffs	afl-fuzz.c	/^static void locate_diffs(u8* ptr1, u8* ptr2, u32 l/
+main_payload_32	afl-as.h	151
+main_payload_64	afl-as.h	381
+mark_as_det_done	afl-fuzz.c	/^static void mark_as_det_done(struct queue_entry* q/
+mark_as_redundant	afl-fuzz.c	/^static void mark_as_redundant(struct queue_entry* /
+mark_as_variable	afl-fuzz.c	/^static void mark_as_variable(struct queue_entry* q/
+mask_bitmap	afl-tmin.c	50
+massive	README	33
+master_id	afl-fuzz.c	205
+master_max	afl-fuzz.c	205
+max_depth	afl-fuzz.c	171
+maybe_add_auto	afl-fuzz.c	/^static void maybe_add_auto(u8* mem, u32 len) {$/
+maybe_delete_out_dir	afl-fuzz.c	/^static void maybe_delete_out_dir(void) {$/
+maybe_update_plot_file	afl-fuzz.c	/^static void maybe_update_plot_file(double bitmap_c/
+measure_preemption	afl-gotcpu.c	/^static u32 measure_preemption(u32 target_ms) {$/
+mem_limit	afl-analyze.c	65
+mem_limit	afl-fuzz.c	101
+mem_limit	afl-showmap.c	60
+mem_limit	afl-tmin.c	68
+memcmp_nocase	afl-fuzz.c	/^static inline u8 memcmp_nocase(u8* m1, u8* m2, u32/
+minimize	afl-tmin.c	/^static void minimize(char** argv) {$/
+minimize_bits	afl-fuzz.c	/^static void minimize_bits(u8* dst, u8* src) {$/
+missed_crashes	afl-tmin.c	64
+missed_hangs	afl-tmin.c	63
+missed_paths	afl-tmin.c	65
+mode	README	104
+modified_file	afl-as.c	54
+next	afl-fuzz.c	259
+next_100	afl-fuzz.c	260
+next_p2	afl-fuzz.c	/^static u32 next_p2(u32 val) {$/
+next_p2	afl-tmin.c	/^static u32 next_p2(u32 val) {$/
+no_arith	afl-fuzz.c	126
+no_cpu_meter_red	afl-fuzz.c	125
+no_forkserver	afl-fuzz.c	121
+not_on_tty	afl-fuzz.c	118
+nuke_resume_dir	afl-fuzz.c	/^static void nuke_resume_dir(void) {$/
+orig_cksum	afl-analyze.c	60
+orig_cksum	afl-tmin.c	61
+orig_cmdline	afl-fuzz.c	96
+out_dir	afl-fuzz.c	89
+out_fd	afl-fuzz.c	136
+out_file	afl-fuzz.c	88
+out_file	afl-showmap.c	53
+out_file	afl-tmin.c	53
+pass_thru	afl-as.c	58
+passed_det	afl-fuzz.c	243
+pending_favored	afl-fuzz.c	168
+pending_not_fuzzed	afl-fuzz.c	167
+perform_dry_run	afl-fuzz.c	/^static void perform_dry_run(char** argv) {$/
+pivot_inputs	afl-fuzz.c	/^static void pivot_inputs(void) {$/
+plot_file	afl-fuzz.c	233
+practice	README	289
+process	README	75
+process	README	96
+prog_in	afl-analyze.c	53
+prog_in	afl-tmin.c	54
+ptr	alloc-inl.h	359
+publish	Makefile	/^publish: clean$/
+q_prev100	afl-fuzz.c	267
+queue	afl-fuzz.c	264
+queue_cur	afl-fuzz.c	265
+queue_cycle	afl-fuzz.c	188
+queue_entry	afl-fuzz.c	235
+queue_top	afl-fuzz.c	266
+queued_at_start	afl-fuzz.c	162
+queued_discovered	afl-fuzz.c	163
+queued_favored	afl-fuzz.c	165
+queued_imported	afl-fuzz.c	164
+queued_paths	afl-fuzz.c	160
+queued_variable	afl-fuzz.c	161
+queued_with_cov	afl-fuzz.c	166
+quiet_mode	afl-showmap.c	64
+rand_cnt	afl-fuzz.c	217
+read_bitmap	afl-fuzz.c	/^EXP_ST void read_bitmap(u8* fname) {$/
+read_bitmap	afl-tmin.c	/^static void read_bitmap(u8* fname) {$/
+read_initial_file	afl-analyze.c	/^static void read_initial_file(void) {$/
+read_initial_file	afl-tmin.c	/^static void read_initial_file(void) {$/
+read_testcases	afl-fuzz.c	/^static void read_testcases(void) {$/
+remove_shm	afl-analyze.c	/^static void remove_shm(void) {$/
+remove_shm	afl-fuzz.c	/^static void remove_shm(void) {$/
+remove_shm	afl-showmap.c	/^static void remove_shm(void) {$/
+remove_shm	afl-tmin.c	/^static void remove_shm(void) {$/
+resuming_fuzz	afl-fuzz.c	116
+rol	sha1.c	/^#define rol(value, bits) (((value) << (bits)) | ((/
+run_target	afl-analyze.c	/^static u32 run_target(char** argv, u8* mem, u32 le/
+run_target	afl-fuzz.c	/^static u8 run_target(char** argv, u32 timeout) {$/
+run_target	afl-showmap.c	/^static void run_target(char** argv) {$/
+run_target	afl-tmin.c	/^static u8 run_target(char** argv, u8* mem, u32 len/
+s16	types.h	50
+s32	types.h	51
+s64	types.h	52
+s8	types.h	49
+sanitizer	afl-as.c	60
+save_auto	afl-fuzz.c	/^static void save_auto(void) {$/
+save_cmdline	afl-fuzz.c	/^static void save_cmdline(u32 argc, char** argv) {$/
+save_if_interesting	afl-fuzz.c	/^static u8 save_if_interesting(char** argv, void* m/
+score_changed	afl-fuzz.c	114
+set_up_environment	afl-analyze.c	/^static void set_up_environment(void) {$/
+set_up_environment	afl-showmap.c	/^static void set_up_environment(void) {$/
+set_up_environment	afl-tmin.c	/^static void set_up_environment(void) {$/
+setup_dirs_fds	afl-fuzz.c	/^EXP_ST void setup_dirs_fds(void) {$/
+setup_post	afl-fuzz.c	/^static void setup_post(void) {$/
+setup_shm	afl-analyze.c	/^static void setup_shm(void) {$/
+setup_shm	afl-fuzz.c	/^EXP_ST void setup_shm(void) {$/
+setup_shm	afl-showmap.c	/^static void setup_shm(void) {$/
+setup_shm	afl-tmin.c	/^static void setup_shm(void) {$/
+setup_signal_handlers	afl-analyze.c	/^static void setup_signal_handlers(void) {$/
+setup_signal_handlers	afl-fuzz.c	/^EXP_ST void setup_signal_handlers(void) {$/
+setup_signal_handlers	afl-showmap.c	/^static void setup_signal_handlers(void) {$/
+setup_signal_handlers	afl-tmin.c	/^static void setup_signal_handlers(void) {$/
+setup_stdio_file	afl-fuzz.c	/^EXP_ST void setup_stdio_file(void) {$/
+shm_id	afl-analyze.c	67
+shm_id	afl-fuzz.c	154
+shm_id	afl-showmap.c	62
+shm_id	afl-tmin.c	70
+show_banner	afl-showmap.c	/^static void show_banner(void) {$/
+show_char	afl-analyze.c	/^static void show_char(u8 val) {$/
+show_init_stats	afl-fuzz.c	/^static void show_init_stats(void) {$/
+show_legend	afl-analyze.c	/^static void show_legend(void) {$/
+show_stats	afl-fuzz.c	/^static void show_stats(void) {$/
+shuffle_ptrs	afl-fuzz.c	/^static void shuffle_ptrs(void** ptrs, u32 cnt) {$/
+shuffle_queue	afl-fuzz.c	127
+simplify_lookup	afl-fuzz.c	1079
+simplify_trace	afl-fuzz.c	/^static void simplify_trace(u64* mem) {$/
+simplify_trace	afl-fuzz.c	/^static void simplify_trace(u32* mem) {$/
+skip_deterministic	afl-fuzz.c	110
+small	README	75
+splicing_with	afl-fuzz.c	203
+stage_cur	afl-fuzz.c	202
+stage_cur_byte	afl-fuzz.c	209
+stage_cur_val	afl-fuzz.c	210
+stage_cycles	afl-fuzz.c	215
+stage_finds	afl-fuzz.c	214
+stage_max	afl-fuzz.c	202
+stage_name	afl-fuzz.c	198
+stage_val_type	afl-fuzz.c	212
+start_time	afl-fuzz.c	183
+state	README	36
+state	sha1.h	14
+stats_update_freq	afl-fuzz.c	103
+stop_soon	afl-analyze.c	75
+stop_soon	afl-fuzz.c	156
+stop_soon	afl-showmap.c	71
+stop_soon	afl-tmin.c	80
+style	afl-plot	149
+subseq_tmouts	afl-fuzz.c	196
+sync_dir	afl-fuzz.c	90
+sync_fuzzers	afl-fuzz.c	/^static void sync_fuzzers(char** argv) {$/
+sync_id	afl-fuzz.c	91
+syncing_case	afl-fuzz.c	207
+syntax	README	288
+target_path	afl-analyze.c	54
+target_path	afl-fuzz.c	95
+target_path	afl-showmap.c	55
+target_path	afl-tmin.c	55
+tc_ref	afl-fuzz.c	257
+term_too_small	afl-fuzz.c	119
+test_build	Makefile	/^test_build: afl-gcc afl-as afl-showmap$/
+test_build	Makefile	/^test_build: afl-gcc afl-as afl-showmap$/
+test_x86	Makefile	/^test_x86:$/
+test_x86	Makefile	/^test_x86:$/
+timeout_given	afl-fuzz.c	117
+top_rated	afl-fuzz.c	270
+total_bitmap_entries	afl-fuzz.c	223
+total_bitmap_size	afl-fuzz.c	222
+total_cal_cycles	afl-fuzz.c	220
+total_cal_us	afl-fuzz.c	219
+total_crashes	afl-fuzz.c	177
+total_execs	afl-analyze.c	61
+total_execs	afl-fuzz.c	182
+total_execs	afl-tmin.c	62
+total_tmouts	afl-fuzz.c	179
+trace_bits	afl-analyze.c	50
+trace_bits	afl-fuzz.c	146
+trace_bits	afl-showmap.c	51
+trace_bits	afl-tmin.c	49
+trace_mini	afl-fuzz.c	256
+trampoline_fmt_32	afl-as.h	107
+trampoline_fmt_64	afl-as.h	130
+trim_case	afl-fuzz.c	/^static u8 trim_case(char** argv, struct queue_entr/
+trim_done	afl-fuzz.c	241
+trim_execs	afl-fuzz.c	190
+u16	types.h	24
+u32	types.h	25
+u64	types.h	44
+u64	types.h	46
+u8	types.h	23
+unique_crashes	afl-fuzz.c	178
+unique_hangs	afl-fuzz.c	181
+unique_tmouts	afl-fuzz.c	180
+unlikely	types.h	/^#define unlikely(_x)  __builtin_expect(!!(_x), 0)$/
+update_bitmap_score	afl-fuzz.c	/^static void update_bitmap_score(struct queue_entry/
+usage	afl-analyze.c	/^static void usage(u8* argv0) {$/
+usage	afl-fuzz.c	/^static void usage(u8* argv0) {$/
+usage	afl-showmap.c	/^static void usage(u8* argv0) {$/
+usage	afl-tmin.c	/^static void usage(u8* argv0) {$/
+use_64bit	afl-as.c	71
+use_64bit	afl-as.c	75
+use_banner	afl-fuzz.c	92
+use_hex_offsets	afl-analyze.c	71
+use_splicing	afl-fuzz.c	112
+use_stdin	afl-analyze.c	72
+use_stdin	afl-tmin.c	77
+useless_at_start	afl-fuzz.c	172
+uses_asan	afl-fuzz.c	120
+var_behavior	afl-fuzz.c	245
+var_byte_count	afl-fuzz.c	173
+var_bytes	afl-fuzz.c	152
+virgin_bits	afl-fuzz.c	148
+virgin_crash	afl-fuzz.c	150
+virgin_tmout	afl-fuzz.c	149
+was_fuzzed	afl-fuzz.c	242
+well	README	34
+write_bitmap	afl-fuzz.c	/^EXP_ST void write_bitmap(void) {$/
+write_crash_readme	afl-fuzz.c	/^static void write_crash_readme(void) {$/
+write_results	afl-showmap.c	/^static u32 write_results(void) {$/
+write_stats_file	afl-fuzz.c	/^static void write_stats_file(double bitmap_cvg, do/
+write_to_file	afl-analyze.c	/^static s32 write_to_file(u8* path, u8* mem, u32 le/
+write_to_file	afl-tmin.c	/^static s32 write_to_file(u8* path, u8* mem, u32 le/
+write_to_testcase	afl-fuzz.c	/^static void write_to_testcase(void* mem, u32 len) /
+write_with_gap	afl-fuzz.c	/^static void write_with_gap(void* mem, u32 len, u32/
