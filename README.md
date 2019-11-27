@@ -1,0 +1,1 @@
+# fuzzcoin-afl
